@@ -7,6 +7,19 @@
     --headline-font: Austin;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.plantCatergories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
 .plantCard {
     display: flex;
     flex-direction: row;
@@ -67,7 +80,6 @@
     font-weight: 500;
     font-size: 16px;
     margin: 0;
-    width: 75px;
 }
 
 .content .cardCTAs {
@@ -115,7 +127,17 @@
     gap: 15px;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    /* width: 100%;  */
+    overflow-x: hidden;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.catergoriesList {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
 .catergories .active{
@@ -129,12 +151,12 @@
     border-radius: 8px;
 }
 
-.catergories .active p {
+/* .catergories .active {
     margin: 0;
     font-family: var(--primary-font);
     font-weight: 700;
     font-size: 16px;
-}
+} */
 
 .catergories .tag {
     display: flex;
@@ -147,9 +169,187 @@
     color: var(--neutral);
 }
 
-.catergories .tag p {
+.catergories .tag {
     margin: 0;
     font-family: var(--primary-font);
     font-weight: 700;
     font-size: 16px;
+}
+
+.catergories .icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* .icon:first-child {
+    left: 0;
+    display: none;
+    background: linear-gradient(90deg, #212121 50%, transparent);
+} */
+
+/* .icon:last-child {
+    right: 0;
+    justify-content: flex-end;
+    background: linear-gradient(-90deg, #212121 50%, transparent);
+} */
+
+.icon:first-child, .icon:last-child {
+    display: none;
+}
+
+/* .icon img {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+} */
+
+.plantCatergories {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.plants {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    place-items: center;
+    width: 100%;
+    grid-gap: 50px;
+    justify-content: center;
+}
+
+@media only screen and (max-width : 600px) {
+    .plantCard {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        width: 80%;
+    }
+
+    .plantCard img {
+        width: 100%;
+        height: 40%;
+    }
+
+    .plantCard .content {
+        width: 80%;
+        gap: 15px;
+    }
+}
+
+@media only screen and (max-width : 400px) {
+    .plantCard {
+        width: 55%;
+    }
+}
+
+.seeAll {
+    padding: 15px 20px;
+    background: var(--neutral);
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    width: 85px;
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    20%,50%,80%, to{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px); 
+    }
+    70%{
+        transform: translateY(-15px);
+    }
+    90%{
+        transform: translateY(-4px);
+    }
+}
+
+.price {
+   display: flex;
+   flex-direction: column; 
+}
+
+.price p:nth-child(1) {
+    font-size: 12px;
+}
+
+.price p:nth-child(2) {
+    text-decoration-line: line-through;
+}
+
+.discountSection {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--primary-color);
+    border-radius: 32px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+    margin-top: 75px;
+}
+
+.discountPlants {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h3 {
+    font-family: var(--primary-font);
+    /* font-weight: 700; */
+    font-size: 24px;
+    color: #fff;
+}
+
+.heading p {
+    font-family: var(--primary-font);
+    font-size: 16px;
+    color: #fff;
+}
+
+.discountEnds {
+    display: flex;
+    align-items: center;}
+
+.discountEnds p {
+    font-family: var(--primary-font);
+    /* font-weight: 500; */
+    font-size: 20px;
+    color: #fff;
+    margin: 0px -155px;
+}
+
+/* .discountSection .vector {
+    position: absolute;
+    left: 53.01%;
+    right: 35.22%;
+    top: 74.6%;
+    bottom: 7.2%;
+} */
+
+@media only screen  and (max-width: 1080px) {
+    .discountPlants {
+        flex-direction: column;
+    }
 }

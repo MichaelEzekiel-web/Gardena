@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #12B76A;
+    --secondary-color: #039855;
+    --text-color: #212427;
+    --neutral: #AAAAAA;
+    --primary-font: Satoshi;
+    --headline-font: Austin;
+}
+
+.appSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 75px;
+    padding: 20px;
+}
+
+.appTxt {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.appTxt h2 {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.appTxt p {
+    font-family: var(--primary-font);
+}
+
+.appCTAs {
+    display: flex;
+    gap: 20px;
+}
+
+.appCTA {
+    background-color: #000;
+    border: 0;
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+.appCTA .btnTxt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.appCTA p {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.appCTA span {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.appImg {
+    width: 50%;
+    background-image: url(../img/Nobg.png);
+    background-position-y: center;
+    background-position-x: -200px;
+}
+
+@media only screen and (max-width: 840px) {
+    .appSection {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .appImg {
+        width: 100%;
+        background-position-x: center;
+    }
+
+    .appTxt {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}
